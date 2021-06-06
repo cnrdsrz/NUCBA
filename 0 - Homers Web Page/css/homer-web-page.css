@@ -30,6 +30,16 @@ header div img {
   align-self: flex-end;
   margin-left: 10rem;
   margin-top: 2rem;
+  animation: clock-animation 2s ease-in-out 2s infinite alternate-reverse;
+}
+@keyframes clock-animation {
+  from {
+    margin-left: 100%;
+    border-radius: 50%;
+  }
+  to {
+    margin-left: 0%;
+  }
 }
 
 section {
@@ -67,6 +77,15 @@ section .jesus img {
   width: auto;
   display: flex;
   justify-content: center;
+  animation: jesus-dancing 2s ease-in-out 2s infinite alternate-reverse;
+}
+@keyframes jesus-dancing {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0%;
+  }
 }
 section .imagenes-right {
   height: 200px;
