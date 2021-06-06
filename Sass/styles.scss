@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #99d1ea;
+}
+
+header {
+    height: 200px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: header-animation;
+
+    h1 {
+        color: black;
+        text-align: center;
+        font-size: 3rem;
+    }
+    @keyframes header-animation {
+
+        from {
+            background-color: blue;
+
+        }
+
+        to {
+            background-color: cornflowerblue;
+
+        }
+        
+    }
+
+}
+
+
+section {
+    height: 400px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+
+    div {
+        height: 300px;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        img {
+            display: flex;
+            justify-content: center;
+            animation-name: first-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+        }
+
+        @keyframes first-animation {
+
+            0% {
+                margin-left: 100%;
+            }
+            50% {
+                margin-left: 50%;
+                transform: 50%;
+            }
+            100% {
+                margin-left: 20%;
+            }
+            
+        }
+
+        .Homer-dancing {
+            height: 200px;
+            width: auto;
+            align-self: flex-end;
+        }
+        
+    }
+    .animation-left {
+        margin-left: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+            
+    }
+    .animation-right {
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;      
+        
+        img:last-child {
+           align-self: flex-end;
+        }
+    }
+
+
+}
