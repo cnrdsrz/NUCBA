@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -127,4 +128,135 @@ section {
     }
 
    
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  background: #79b7d3;
+}
+
+header {
+    height: 200px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+        font-size: 5rem;
+        text-align: center;
+        color: black;
+        display: flex;
+        justify-content: center;
+    }
+    div img {
+        display: flex;
+        align-self: flex-end;
+        margin-left: 10rem;
+        margin-top: 2rem;
+        animation: clock-animation 2s ease-in-out 2s infinite alternate-reverse; 
+
+    }
+    @keyframes clock-animation {
+
+        from {
+            margin-left: 100%;
+            border-radius: 50%;
+        }
+        
+        to {
+            margin-left: 0%;
+        }
+    }
+
+}
+
+section {
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+
+    .imagenes-left {
+        height: 200px;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            margin: 2rem;
+        }
+        .tostadora-grande {
+            height: 150px;
+            width: auto;
+
+            img {
+                height: 130px;
+                width: auto;
+                
+            }
+           
+        }
+    }
+
+    .jesus {
+        height: 400px;
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+        
+        img {
+            height: 400px;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            animation: jesus-dancing 2s ease-in-out 2s infinite alternate-reverse;
+        }
+
+        @keyframes jesus-dancing {
+
+            from {
+                margin-top: 100%;
+            }
+            
+            to {
+                margin-top: 0%;
+            }
+        }
+    }
+
+
+    .imagenes-right {
+        height: 200px;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        
+        img {
+            margin: 2rem;
+        }
+        .tostadora-grande {
+            height: 150px;
+            width: auto;
+            
+            img {
+                height: 130px;
+                width: auto;  
+                
+            }
+           
+        }
+        
+    }
+
+   
+>>>>>>> 84f122a5eb82b2062f619eb15962f8013cbe03b8
 }
