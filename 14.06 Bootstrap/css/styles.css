@@ -1,0 +1,9 @@
+@media (min-width: 992px) {
+  .alto-vh {
+    height: 100vh;
+    width: auto;
+    margin: 3rem 3rem 3rem 3rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
