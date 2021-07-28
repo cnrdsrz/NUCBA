@@ -1,13 +1,15 @@
 @mixin titles {
-    font-family: serif sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     font-size: 3rem;
-    color: rgb(247, 247, 247);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.719);
 }
 
 @mixin articles {
-    font-family: sans-serif;
-    font-size: 1rem;
-    color: white;
+    font-family: 'Sans Serif', Arial, sans-serif;
+    font-size: 1.20rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.719);
 }
 
 * {
@@ -18,83 +20,220 @@
 }
 
 body {
-    height: 1100px;
-    width: 350px;
-    background-image:url(/Pictures/Countryside-sombra.jpg)
+    
+    height: 3700px;
+    width: 100%;
+
+    @media (min-width: 1200px) {
+        width: 100%;
+        height: 3000px;
+    }
     
 }
 main {
     width: 100vw;
-    height: auto;
+    height: 3300px;
+    
+}
+
+.container-fluid {
+    background-color: black;
 }
 header {
-    height: 1000px;
-    width: 350px;
-    display: flex;    
-    h1 {
-        height: 200px;
-        width: 350px;
-        justify-content: center;
-        align-self: flex-start;
+
+    width: 100%;
+    height: 800px;
+    background-image: url(/Pictures/Countryside.jpg);
+    display: flex;
+    justify-content: center;
+              
+    div {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+        height: 300px;
+        width: 300px;
+        align-self: center;
         text-align: center;
         margin-top: 10rem;
+        color: black;
         @include titles()
+        }
     }
+
+    .formulario {
+        
+        height: 250px;
+        width: 300px;
+        background-color: black;
+        color: white;
+
+        @media (min-width: 1200px) {
+
+        height: 250px;
+        width: 400px;
+        background-color: black;
+        color: white;
+     }
+
+        form {
+            align-self: center;
+            text-align: center;
+            margin-top: 2rem;
+            @include articles()
+        }
+
+        button {
+            align-self: center;
+            width: 200px;
+            margin-top: 1rem;
+        }
+    }
+
+    
 }
 
 section {
-    height: 1800px;
-    width: 350px;
+    height: 2700px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    background-image: url(/Pictures/Countryside-sombra.jpg);
+    flex-direction: column;
+    background-color: #05151d;
+
+    @media (min-width: 1200px) {
+        height: 2300px;
+        width: auto;
+        justify-content: flex-start;
+    }
+
+    .contenedorImagenes {
+        display: none;
+        @media (min-width: 1200px) {
+            height: 350px;
+            display: block;
+            display: flex;
+            flex-direction: row;            
+            
+            div {
+                height: 250px;
+                width: auto;
+                flex-direction: column;
+                margin-bottom: 3rem;
+                
+                img {
+                    width: 300px;
+                    height: 200px;
+                }
+                h3 {
+                    color: rgba(255, 255, 255, 0.719);
+                    align-self: center;
+                }
+            }
+        }
+    }
 
     div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 3rem;
         height: 800px;
-        width: 350px;
+        width: 100%;
         
+            @media (min-width: 1200px) {
+            height: 500px;
+            width: auto;
+            flex-direction: row-reverse; 
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 3rem;
+        }
 
-             img {
-                height: 250px;
+        .description {
+            height: 300px;
+            width: auto;
+            display: flex;
+            @media (min-width: 1200px) {
+                height: 300px;
+                width: 600px;
+                flex-direction: column;
+            }
+        }   
+            img {
+                height: 400px;
                 width: 300px;
+                margin-bottom: 3rem;
                 justify-content: center;
               }
             
             h2 {
-                height: 100px;
-                width: 350px;
-                margin-top: 2rem;
+                height: 150px;
+                width: 300px;
+                margin-top: 1rem;
+                margin-bottom: 3rem;
                 text-align: center;
-                @include titles()
+                @include titles();
+                @media (min-width: 1200px) {
+                    height: 400px;
+                    width: 600px;
+                    align-self: flex-start;
+                }
             }
 
-            article {
-                height: 250px;
-                width: 350px; 
-                text-align: center;
+            button {
                 margin-top: 2rem;
-                @include articles()
-              }
-        
+            }      
     }   
+    
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 100%; 
+        
+        p {
+        height: 200px;
+        width: 400px;
+        justify-content: center;
+        text-align: center;
+                
+        @include articles()
+        }
+      }
         
 }
 
 footer {
+    height: 300px;
+    width: auto;
     display: flex;
     flex-direction: column;
-    h2 {
-        height: 50px;
-        width: 350px;
-        display: flex;
-        justify-content: center;
-    }
-    ul {
-        justify-content: space-around;
-    }
+    justify-content: space-around;
+    background-color: black;
+    
+       h2 {
+           margin-left: 1rem;
+       }
+
+       ul {
+           display: flex;
+           flex-direction: column-reverse;
+
+           @media (min-width: 1200px) {
+               flex-direction: row;
+               justify-content: space-around;               
+           }
+           
+           img {
+               height: 30px;
+               width: auto;
+               border-radius: 50%;
+           }
+
+        }    
 }
