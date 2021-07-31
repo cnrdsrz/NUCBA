@@ -20,7 +20,6 @@
 }
 
 body {
-    
     height: 3700px;
     width: 100%;
 
@@ -32,7 +31,7 @@ body {
 }
 main {
     width: 100vw;
-    height: 3300px;
+    height: 100vh;
     
 }
 
@@ -90,8 +89,6 @@ header {
             margin-top: 1rem;
         }
     }
-
-    
 }
 
 section {
@@ -223,7 +220,7 @@ footer {
        ul {
            display: flex;
            flex-direction: column-reverse;
-
+           
            @media (min-width: 1200px) {
                flex-direction: row;
                justify-content: space-around;               
@@ -233,6 +230,11 @@ footer {
                height: 30px;
                width: auto;
                border-radius: 50%;
+           }
+
+           a {
+                text-decoration: none;
+                @include articles()
            }
 
         }    
