@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Forms Validation</title>
+</head>
+<body>
+    <form onsubmit={enviarFormulario(event)}>
+        <label for="nombre"></label><input id="nombre" placeholder="Nombre" type="text">
+        <label for="apellido"></label><input class="input" id="apellido" placeholder="Apellido" type="text">
+        <label for="email"></label><input class="input" id="email" placeholder="Email" type="email">
+        <label for="terms">Aceptar términos y condiciones</label><input type="checkbox" id="terms">
+        <input class="submit" type="submit" value="Enviar">
+    </form>   
+    
+    <script src="main.js"></script>
+</body>
+</html>

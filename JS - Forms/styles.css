@@ -1,0 +1,32 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    height: auto;
+    width: 100%;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario form label {
+    margin-top: 1rem;
+    align-self: center;
+    text-align: center;
+}
+
+.formulario button {
+    width: 200px;
+    height: auto;
+}
